@@ -1,0 +1,29 @@
+{% load static %}
+{% for course in  courses %}
+<div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+    <div class="course-item">
+      <img src="{{ course.image.url }}" class="img-fluid" alt="...">
+      <div class="course-content">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4>{{ course.title }}</h4>
+          <p class="price">$ {{ course.price }} </p>
+        </div>
+
+        <h3><a href="{% url 'course_details' %}">{{ course.content }}</a></h3>
+        <p>{{ course.description|safe }}</p>
+        <div class="trainer d-flex justify-content-between align-items-center">
+          <div class="trainer-profile d-flex align-items-center">
+            <img src="{{ course.image_teacher.url }}" class="img-fluid" alt="">
+            <span>{{ course.name }}</span>
+          </div>
+          <div class="trainer-rank d-flex align-items-center">
+            <i class="bx bx-user"></i>&nbsp;{{ course.like }}
+            &nbsp;&nbsp;
+            <i class="bx bx-heart"></i>&nbsp;{{ course.like_two }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- End Course Item-->
+
+  {% endfor %}

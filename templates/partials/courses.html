@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Courses {% endblock  %}
+  
+
+
+
+  <!-- ======= Header ======= -->
+{% block content %}
+{% include 'companents/_navbar.html' %}
+  <main id="main" data-aos="fade-in">
+
+    
+
+    <!-- ======= Courses Section ======= -->
+    <section id="courses" class="courses">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+
+          {% include 'companents/_courses.html' %}
+
+        </div>
+
+      </div>
+    </section><!-- End Courses Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+
+ {% include 'companents/_footer.html' %}
+
+ {% endblock  %}

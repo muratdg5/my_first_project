@@ -1,0 +1,29 @@
+{% for counts in indexcounts %}
+    
+<section id="counts" class="counts section-bg">
+  <div class="container">
+
+    <div class="row counters">
+
+      <div class="col-lg-3 col-6 text-center">
+        <span data-purecounter-start="0" data-purecounter-end="{{ counts.name_student_sayi }}" data-purecounter-duration="1" class="purecounter"></span>
+        <p>{{ counts.name_student }}</p>
+      </div>
+
+      <div class="col-lg-3 col-6 text-center">
+        <span data-purecounter-start="0" data-purecounter-end="{{ counts.name_courses_sayi }}" data-purecounter-duration="1" class="purecounter"></span>
+        <p>{{ counts.name_courses }}</p>
+      </div>
+
+     
+
+      <div class="col-lg-3 col-6 text-center">
+        <span data-purecounter-start="0" data-purecounter-end="{{ counts.name_trainers_sayi }}" data-purecounter-duration="1" class="purecounter"></span>
+        <p>{{ counts.name_trainers }}</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+{% endfor %}

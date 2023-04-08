@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Index{% endblock  %}
+{% block content %}
+  <!-- ======= Header ======= -->
+{% include 'companents/_navbar.html' %}
+
+  <!-- ======= Hero Section ======= -->
+  {% for  hero in  indexhero %}
+  <section id="hero" class="d-flex justify-content-center align-items-center">
+    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+      <h1>{{ hero.text }}<br>{{ hero.text_one }}</h1>
+      <h2>{{ hero.description }}</h2>
+      <a href="courses.html" class="btn-get-started">{{ hero.button1 }}</a>
+    </div>
+  </section><!-- End Hero -->
+  {% endfor %}
+
+  <main id="main">
+
+    
+    <!-- ======= About Section ======= -->
+  {% include 'companents/_aboutsection.html' %}
+<!-- ======= Counts Section ======= -->
+{% include 'companents/_countsection.html' %}
+<!-- End Counts Section -->
+    
+    <!-- ======= Why Us Section ======= -->
+    {% for why in indexwhysection %}
+    <section id="why-us" class="why-us">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="content">
+              <h3>{{ why.name}}</h3>
+              <p>
+                {{ why.content}}
+              </p>
+              <div class="text-center">
+                <a href="about.html" class="more-btn">{{ why.btton1 }} <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+    {% endfor %}
+    <!-- ======= Features Section ======= -->
+ 
+
+    <!-- ======= Popular Courses Section ======= -->
+    <section id="popular-courses" class="courses">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Courses</h2>
+          <p>Popular Courses</p>
+        </div>
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+
+          {% include 'companents/_courses.html' %}
+
+
+
+        </div>
+
+      </div>
+    </section><!-- End Popular Courses Section -->
+
+    <!-- ======= Trainers Section ======= -->
+    <section id="trainers" class="trainers">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          {% include 'companents/_trainers.html' %}
+
+        </div>
+
+      </div>
+    </section><!-- End Trainers Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+{% include 'companents/_footer.html' %}
+
+{% endblock  %}

@@ -1,0 +1,29 @@
+{% load static %}
+{% for section in indexsection %}
+<section id="about" class="about">
+  <div class="container" data-aos="fade-up">
+
+    <div class="row">
+      <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+        <img src="{{  section.image.url }}" class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+        <h3>{{ section.text }}</h3>
+        <p class="fst-italic">
+          {{ section.description }}
+        </p>
+        <ul>
+          <li><i class="bi bi-check-circle"></i>{{ section.text_one }}</li>
+          <li><i class="bi bi-check-circle"></i>{{ section.text_two }}</li>
+          <li><i class="bi bi-check-circle"></i>{{ section.text_theree }}</li>
+        </ul>
+        <p>
+          {{ section.description_one }}
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+</section><!-- End About Section -->
+{% endfor %}
